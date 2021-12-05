@@ -1,6 +1,12 @@
-﻿namespace Grafos
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Grafos
 {
-    class CLista
+    class CLista    //nos ayuda a implementar la estructura de grafo con lista de adyacencia
     {
         //atributos
         private CVertice aElemento;
@@ -74,7 +80,7 @@
             {
                 if (aElemento == null)
                 {
-                    aElemento = new CVertice(pElemento: pElemento);
+                    aElemento = new CVertice(pElemento.nombre);
                     aPeso = pPeso;
                     aSubLista = new CLista();
                 }
@@ -92,15 +98,20 @@
 
         public void Eliminar(CVertice pElemento)
         {
-            if (aElemento.Equals(pElemento))
+            if (aElemento != null)
             {
-                aElemento = aSubLista.aElemento;
-                aSubLista = aSubLista.SubLista;
+                if (aElemento.Equals(pElemento))
+                {
+                    aElemento = aSubLista.aElemento;
+                    aSubLista = aSubLista.SubLista;
+                }
+                else
+                {
+                    aSubLista.Eliminar(pElemento);
+                }
             }
-            else
-            {
-                aSubLista.Eliminar(pElemento);
-            }
+
+
         }
 
         public int NroElementos()
@@ -111,7 +122,7 @@
                 return 0;
         }
 
-        public object LesimoElemento(int posicion)
+        public object lesimoElemento(int posicion)
         {
             if ((posicion > 0) && (posicion <= NroElementos()))
             {
@@ -121,7 +132,7 @@
                 }
                 else
                 {
-                    return aSubLista.LesimoElemento(posicion - 1);
+                    return aSubLista.lesimoElemento(posicion - 1);
                 }
             }
             else
@@ -154,7 +165,7 @@
         {
             if ((aElemento != null) && (pElemento != null))
             {
-                return (aElemento.Equals(pElemento) || aSubLista.ExisteElemento(pElemento));
+                return (aElemento.Equals(pElemento) || (aSubLista.ExisteElemento(pElemento)));
             }
             else
                 return false;

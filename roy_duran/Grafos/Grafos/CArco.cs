@@ -1,10 +1,15 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;               //libreria agregada para poder dibujar
+using System.Linq;
+using System.Text;
 
 namespace Grafos
 {
     class CArco
     {
         //atributos
+        //nos sirve para definir los arcos o aristas del grafo
         public CVertice nDestino;
         public int peso;            //peso (valor) de cada arco (Arista)
         public float grosor_flecha;

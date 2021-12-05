@@ -33,7 +33,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <table class="auto-style1">
+    <table class="auto-style1"> 
         <tr>
             <td class="auto-style2" colspan="5"><span class="auto-style3"><strong>
                 <br />
@@ -57,12 +57,12 @@
             <td colspan="3" rowspan="2" class="auto-style4">
                 <br />
                 <asp:Label ID="Label1" runat="server" Text="USUAIO"></asp:Label>
-&nbsp;
+                :&nbsp;
                 <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="CLAVE"></asp:Label>
-&nbsp;&nbsp;&nbsp;
+                :&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtClave" runat="server" TextMode="Password"></asp:TextBox>
                 <br />
                 <asp:Label ID="lblMensaje" runat="server" CssClass="auto-style5"></asp:Label>

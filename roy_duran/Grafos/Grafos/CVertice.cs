@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Drawing;               //libreria agregada para poder dibujar
+using System.Drawing.Drawing2D;     //libreria agregada para poder dibujar
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Grafos
 {
@@ -13,10 +16,12 @@ namespace Grafos
 
         /* Los diccionarios representan una coleccion de claves y valores, El primer parametro representa el tipo de las claves del
          * el segundo el tipo de los valores del diccionario
+         * 
+         * Esat clas enos sirve para definir los nodos
          */
 
-        //readonly Dictionary<string, short> _banderas;
-        //readonly Dictionary<string, short> _banderas_predeterminado;
+        Dictionary<string, short> _banderas;
+        Dictionary<string, short> _banderas_predeterminado;
 
         //Propiedades
         public Color Color
@@ -47,7 +52,9 @@ namespace Grafos
             }
         }
 
-        static readonly int size = 35; //tamaño del nodo
+        public string nombre { get; internal set; }
+
+        static int size = 35; //tamaño del nodo
         Size dimensiones;
         Color color_nodo;     //color definido para el nodo
         Color color_fuente;   //color definido para la fuente del nombre del nodo 
@@ -61,13 +68,15 @@ namespace Grafos
         {
             this.Valor = Valor;
             this.ListaAdyacencia = new List<CArco>();
+            this._banderas = new Dictionary<string, short>();
+            this._banderas_predeterminado = new Dictionary<string, short>();
             this.Color = Color.Green;                   //color del nodo
             this.Dimensiones = new Size(size, size);    //definimos las dimensiones del circulo
             this.FontColor = Color.White;               //color fde la fuente
         }
 
-        public CVertice() { }
-        public CVertice(CVertice pElemento) : this(" ") { }                 //Constructor por defecto (sin parametros)
+        public CVertice(): this("") { }  //constructor por default
+        public CVertice(CVertice pElemento) : this(" ") { }      //Constructor por defecto (sin parametros)
 
 
         // Metodos para dibujar el nodo
@@ -87,7 +96,8 @@ namespace Grafos
                 {
                     Alignment = StringAlignment.Center,
                     LineAlignment = StringAlignment.Center
-                });
+                }
+                );
             g.DrawEllipse(new Pen(Brushes.Black, (float)1.0), areaNodo);
             b.Dispose();            //para liberar los recursos utilizados por el objeto
         }
@@ -104,10 +114,9 @@ namespace Grafos
 
                 distancia = (float)Math.Sqrt(difX * difX + difY * difY);
 
-                AdjustableArrowCap bigArrow = new AdjustableArrowCap(4, 4, true)
-                {
-                    BaseCap = System.Drawing.Drawing2D.LineCap.Triangle
-                };
+                AdjustableArrowCap bigArrow = new AdjustableArrowCap(4, 4, true);
+                bigArrow.BaseCap = System.Drawing.Drawing2D.LineCap.Triangle;
+
 
                 g.DrawLine(new Pen(new SolidBrush(arco.color), arco.grosor_flecha)
                 {
@@ -147,11 +156,10 @@ namespace Grafos
             posicion.Dispose();
             return retval;
         }
-
         public
         override string ToString()
         {
-            return Valor;
+            return this.Valor;
         }
     }
 }

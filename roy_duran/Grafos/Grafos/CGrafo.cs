@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Grafos
 {
@@ -23,7 +27,7 @@ namespace Grafos
             nodos.Add(nodo);
             return nodo;
         }
-        //agregar un nodo a la lista de nodos
+        //agregar un nodo en la lista de nodos del grafo
         public void AgregarVertice(CVertice nuevonodo)
         {
             nodos.Add(nuevonodo);

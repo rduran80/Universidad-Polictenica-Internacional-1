@@ -11,7 +11,7 @@ namespace Grafos
         /// <summary>
         /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -34,6 +34,8 @@ namespace Grafos
             this.Pizarra = new System.Windows.Forms.Panel();
             this.CMSCrearVertice = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.nuevoVerticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarVerticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarArcoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CMSCrearVertice.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,39 +50,50 @@ namespace Grafos
             // 
             // Pizarra
             // 
-            this.Pizarra.Location = new System.Drawing.Point(12, 99);
+            this.Pizarra.Location = new System.Drawing.Point(12, 70);
             this.Pizarra.Name = "Pizarra";
-            this.Pizarra.Size = new System.Drawing.Size(776, 339);
+            this.Pizarra.Size = new System.Drawing.Size(776, 368);
             this.Pizarra.TabIndex = 1;
-            this.Pizarra.Paint += new System.Windows.Forms.PaintEventHandler(this.Pizarra_Paint_1);
+            this.Pizarra.Paint += new System.Windows.Forms.PaintEventHandler(this.Pizarra_Paint);
             // 
             // CMSCrearVertice
             // 
             this.CMSCrearVertice.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoVerticeToolStripMenuItem});
-            this.CMSCrearVertice.Name = "CMSCrearVertice";
-            this.CMSCrearVertice.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.CMSCrearVertice.ShowCheckMargin = true;
-            this.CMSCrearVertice.Size = new System.Drawing.Size(170, 26);
-            this.CMSCrearVertice.Tag = "y";
-            this.CMSCrearVertice.Text = "x";
+            this.nuevoVerticeToolStripMenuItem,
+            this.eliminarVerticeToolStripMenuItem,
+            this.eliminarArcoToolStripMenuItem});
+            this.CMSCrearVertice.Name = "contextMenuStrip1";
+            this.CMSCrearVertice.Size = new System.Drawing.Size(181, 92);
             // 
             // nuevoVerticeToolStripMenuItem
             // 
             this.nuevoVerticeToolStripMenuItem.Name = "nuevoVerticeToolStripMenuItem";
             this.nuevoVerticeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoVerticeToolStripMenuItem.Text = "Nuevo Vertice";
+            this.nuevoVerticeToolStripMenuItem.Click += new System.EventHandler(this.nuevoVerticeToolStripMenuItem_Click_1);
+            // 
+            // eliminarVerticeToolStripMenuItem
+            // 
+            this.eliminarVerticeToolStripMenuItem.Name = "eliminarVerticeToolStripMenuItem";
+            this.eliminarVerticeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarVerticeToolStripMenuItem.Text = "Eliminar Vertice";
+            // 
+            // eliminarArcoToolStripMenuItem
+            // 
+            this.eliminarArcoToolStripMenuItem.Name = "eliminarArcoToolStripMenuItem";
+            this.eliminarArcoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarArcoToolStripMenuItem.Text = "Eliminar Arco";
             // 
             // Simulador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ContextMenuStrip = this.CMSCrearVertice;
             this.Controls.Add(this.Pizarra);
             this.Controls.Add(this.label1);
             this.Name = "Simulador";
             this.Text = "Simulador Grafos";
-            this.Load += new System.EventHandler(this.Simulador_Load);
             this.CMSCrearVertice.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -93,6 +106,8 @@ namespace Grafos
         private System.Windows.Forms.Panel Pizarra;
         private System.Windows.Forms.ContextMenuStrip CMSCrearVertice;
         private System.Windows.Forms.ToolStripMenuItem nuevoVerticeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarVerticeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarArcoToolStripMenuItem;
     }
 }
 
