@@ -27,7 +27,7 @@
             color: #FFFFFF;
             font-size: large;
             margin-bottom: 0px;
-            background-color: #0000FF
+            background-color:aliceblue;
         }
     </style>
 </head>

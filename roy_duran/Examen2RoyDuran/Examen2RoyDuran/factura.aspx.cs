@@ -23,5 +23,11 @@ namespace Examen2RoyDuran
         {
             Response.Redirect("principal.aspx");
         }
+
+        protected void TextBox12_TextChanged(object sender, EventArgs e)
+        {
+            float montoVisible = 0;
+            montoVisible =  
+        }
     }
 }

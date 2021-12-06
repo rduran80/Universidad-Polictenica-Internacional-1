@@ -35,7 +35,7 @@ namespace Grafos
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtVertice = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CMSCrearVertice = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,7 +56,7 @@ namespace Grafos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 118);
+            this.label2.Location = new System.Drawing.Point(29, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 18);
             this.label2.TabIndex = 1;
@@ -64,21 +64,21 @@ namespace Grafos
             // 
             // txtVertice
             // 
-            this.txtVertice.Location = new System.Drawing.Point(199, 116);
+            this.txtVertice.Location = new System.Drawing.Point(199, 93);
             this.txtVertice.Name = "txtVertice";
             this.txtVertice.Size = new System.Drawing.Size(79, 20);
             this.txtVertice.TabIndex = 2;
             this.txtVertice.TextChanged += new System.EventHandler(this.txtVertice_TextChanged);
             // 
-            // contextMenuStrip1
+            // CMSCrearVertice
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.CMSCrearVertice.Name = "contextMenuStrip1";
+            this.CMSCrearVertice.Size = new System.Drawing.Size(61, 4);
             // 
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(53, 165);
+            this.btnAceptar.Location = new System.Drawing.Point(45, 144);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(80, 30);
             this.btnAceptar.TabIndex = 4;
@@ -89,7 +89,7 @@ namespace Grafos
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(189, 165);
+            this.btnCancelar.Location = new System.Drawing.Point(181, 144);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 30);
             this.btnCancelar.TabIndex = 5;
@@ -119,7 +119,7 @@ namespace Grafos
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtVertice;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip CMSCrearVertice;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
     }

@@ -65,6 +65,9 @@
             color: #000000;
             font-size: x-large;
         }
+        .auto-style20 {
+            margin-right: 0px;
+        }
     </style>
 </head>
 <body>
@@ -114,8 +117,9 @@
                 <asp:TextBox ID="TextBox10" runat="server" CssClass="auto-style15"></asp:TextBox>
                 <br class="auto-style16" />
                 <br class="auto-style16" />
-                    </strong><span class="auto-style16"><strong>Descuento :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><strong> <asp:TextBox ID="TextBox11" runat="server" CssClass="auto-style15"></asp:TextBox>
-                    </strong><span class="auto-style16"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sub Total :&nbsp;&nbsp; </strong></span><strong>
+                    </strong><span class="auto-style16"><strong>Descuento :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><strong> <asp:TextBox ID="txtDesc" runat="server" CssClass="auto-style15"></asp:TextBox>
+                    </strong><span class="auto-style16"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sub Total :&nbsp;<asp:TextBox ID="txtMonto" runat="server" CssClass="auto-style20" Height="28px" Width="230px" OnTextChanged="TextBox12_TextChanged"></asp:TextBox>
+                    &nbsp; </strong></span><strong>
                 <br class="auto-style16" />
                     </strong><span class="auto-style16"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><strong> <br class="auto-style16" />
                     </strong><span class="auto-style16"><strong>IVA :&nbsp;&nbsp; </strong></span><strong>

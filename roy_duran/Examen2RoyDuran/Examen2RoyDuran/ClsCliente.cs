@@ -25,9 +25,15 @@ namespace Examen2RoyDuran
 
 
 
+        public static string GetNombre(string nombre)
+        {
+            return nombre;
+        }
 
-
-
+        public static void SetNombre(string value   )
+        {
+            obj.SetValue(NombreProperty, value);
+        }
 
     }
 }

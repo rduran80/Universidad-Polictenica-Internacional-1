@@ -77,14 +77,22 @@ namespace Grafos
                         int posY = e.Location.Y;
 
                         if (posX < nuevoNodo.Dimensiones.Width / 2)
+                        {
                             posX = nuevoNodo.Dimensiones.Width / 2;
-                        else if (posX > Pizarra.Size.Width - nuevoNodo.Dimensiones.Width / 2)
-                            posX = Pizarra.Size.Width - nuevoNodo.Dimensiones.Width / 2;
+                        }
+                            else if (posX > Pizarra.Size.Width - nuevoNodo.Dimensiones.Width / 2)
+                            {
+                                posX = Pizarra.Size.Width - (nuevoNodo.Dimensiones.Width / 2);
+                            }
 
                         if (posY < nuevoNodo.Dimensiones.Width / 2)
+                        {
                             posY = nuevoNodo.Dimensiones.Width / 2;
-                        else if (posY > Pizarra.Size.Width - nuevoNodo.Dimensiones.Width / 2)
-                            posY = Pizarra.Size.Width - nuevoNodo.Dimensiones.Width / 2;
+                        }
+                            else if (posY > Pizarra.Size.Width - nuevoNodo.Dimensiones.Width / 2)
+                            {
+                                posY = Pizarra.Size.Width - nuevoNodo.Dimensiones.Width / 2;
+                            }
 
                         nuevoNodo.Posicion = new Point(posX, posY);
                         Pizarra.Refresh();
@@ -92,16 +100,14 @@ namespace Grafos
                     }
                     break;
                 case 1:         //Dibujar arco
-                    AdjustableArrowCap bigArrow = new AdjustableArrowCap(4, 4, true)
-                    {
-                        BaseCap = System.Drawing.Drawing2D.LineCap.Triangle
-                    };
+                    AdjustableArrowCap bigArrow = new AdjustableArrowCap(4, 4, true);
+                    bigArrow.BaseCap = System.Drawing.Drawing2D.LineCap.Triangle;
+
 
                     Pizarra.Refresh();
                     Pizarra.CreateGraphics().DrawLine(new Pen(Brushes.Black, 2)
                     {
-                        CustomEndCap = bigArrow
-                    },
+                        CustomEndCap = bigArrow},
                         NodoOrigen.Posicion, e.Location);
                     break;
             }
@@ -113,35 +119,35 @@ namespace Grafos
             {
                 if ((NodoOrigen = grafo.DetectarPunto(e.Location)) != null)
                 {
-                    var_control = 1;        // se utiliza para indicar el esatdo de lapizarra
+                    var_control = 1;        // se utiliza para indicar el estado de la pizarra
                                             //0: sin accion, 1: Dibujando arco, 2: Nuevo vertice
                 }
-            }
-            if (nuevoNodo != null && NodoOrigen == null)
-            {
-                ventanaVertice.Visible = true;
-                ventanaVertice.control = false;
-                grafo.AgregarVertice(nuevoNodo);
-                ventanaVertice.ShowDialog();
-
-                if (ventanaVertice.control)
+                if (nuevoNodo != null && NodoOrigen == null)
                 {
-                    if (grafo.BuscarVertice(ventanaVertice.txtVertice.Text) == null)
-                    {
-                        nuevoNodo.Valor = ventanaVertice.txtVertice.Text;
-                    }
-                    else
-                    {
-                        MessageBox.Show("El Nodo " + ventanaVertice.txtVertice.Text + " ya existe en el grafo", "Error nuevo nodo",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                nuevoNodo = null;
-                var_control = 0;
+                    ventanaVertice.Visible = false;
+                    ventanaVertice.control = false;
+                    grafo.AgregarVertice(nuevoNodo);
+                    ventanaVertice.ShowDialog();
 
-                Pizarra.Refresh();
+                    if (ventanaVertice.control)
+                    {
+                        if (grafo.BuscarVertice(ventanaVertice.txtVertice.Text) == null)
+                        {
+                            nuevoNodo.Valor = ventanaVertice.txtVertice.Text;
+                        }
+                        else
+                        {
+                            MessageBox.Show("El Nodo " + ventanaVertice.txtVertice.Text + " ya existe en el grafo", "Error nuevo nodo",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                    }
+                    nuevoNodo = null;
+                    var_control = 0;
+
+                    Pizarra.Refresh();
+                }
             }
-            if (e.Button == System.Windows.Forms.MouseButtons.Right)    //sis e ha preionado el bton derecho del raton
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)    //si se ha preionado el bton derecho del raton
             {
                 if (var_control == 0)
                 {
@@ -157,19 +163,23 @@ namespace Grafos
 
             }
         }
-
-        private void Simulador_Load(object sender, EventArgs e)
+        private void eliminarVerticeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void nuevoVerticeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void eliminarArcoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nuevoVerticeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             {
+               
                 nuevoNodo = new CVertice();
                 var_control = 2;
             }
         }
-
     }
 }

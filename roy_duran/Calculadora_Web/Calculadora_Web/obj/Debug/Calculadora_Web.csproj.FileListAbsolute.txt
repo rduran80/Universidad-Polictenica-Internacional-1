@@ -56,3 +56,7 @@ C:\Users\USUARIO\source\repos\Calculadora_Web\Calculadora_Web\obj\Debug\Calculad
 C:\Users\USUARIO\source\repos\Calculadora_Web\Calculadora_Web\obj\Debug\Calculadora_Web.csproj.CoreCompileInputs.cache
 C:\Users\USUARIO\source\repos\Calculadora_Web\Calculadora_Web\obj\Debug\Calculadora_Web.dll
 C:\Users\USUARIO\source\repos\Calculadora_Web\Calculadora_Web\obj\Debug\Calculadora_Web.pdb
+C:\Users\USUARIO\Source\Repos\Universidad-Polictenica-Internacional\roy_duran\Calculadora_Web\Calculadora_Web\obj\Debug\Calculadora_Web.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Source\Repos\Universidad-Polictenica-Internacional\roy_duran\Calculadora_Web\Calculadora_Web\obj\Debug\Calculadora_Web.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Source\Repos\Universidad-Polictenica-Internacional\roy_duran\Calculadora_Web\Calculadora_Web\obj\Debug\Calculadora_Web.dll
+C:\Users\USUARIO\Source\Repos\Universidad-Polictenica-Internacional\roy_duran\Calculadora_Web\Calculadora_Web\obj\Debug\Calculadora_Web.pdb
