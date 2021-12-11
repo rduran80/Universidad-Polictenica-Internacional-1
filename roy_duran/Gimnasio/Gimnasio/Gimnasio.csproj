@@ -67,27 +67,81 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="clientes.aspx" />
+    <Content Include="CSS\Styles.css" />
+    <Content Include="imagenes\gym.jpg" />
+    <Content Include="imagenes\login.png" />
+    <Content Include="reporte.aspx" />
+    <Content Include="usuarios.aspx" />
     <Content Include="Web.config" />
+    <Content Include="incio.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuMaster.Master.cs">
-      <DependentUpon>MenuMaster.Master</DependentUpon>
+    <Compile Include="clientes.aspx.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MenuMaster.Master.designer.cs">
-      <DependentUpon>MenuMaster.Master</DependentUpon>
+    <Compile Include="clientes.aspx.designer.cs">
+      <DependentUpon>clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inicio.Master.cs">
+      <DependentUpon>inicio.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inicio.Master.designer.cs">
+      <DependentUpon>inicio.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasMaestras\ManuMaster.Master.cs">
+      <DependentUpon>ManuMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasMaestras\ManuMaster.Master.designer.cs">
+      <DependentUpon>ManuMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasMaestras\MenuUser.Master.cs">
+      <DependentUpon>MenuUser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasMaestras\MenuUser.Master.designer.cs">
+      <DependentUpon>MenuUser.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="incio.aspx.cs">
+      <DependentUpon>incio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="incio.aspx.designer.cs">
+      <DependentUpon>incio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reporte.aspx.cs">
+      <DependentUpon>reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporte.aspx.designer.cs">
+      <DependentUpon>reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios.aspx.cs">
+      <DependentUpon>usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuarios.aspx.designer.cs">
+      <DependentUpon>usuarios.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MenuMaster.Master" />
+    <Content Include="PaginasMaestras\ManuMaster.Master" />
+    <Content Include="inicio.Master" />
     <None Include="packages.config" />
+    <Content Include="PaginasMaestras\MenuUser.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
