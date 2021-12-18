@@ -1,5 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/albumMaster.Master" AutoEventWireup="true" CodeBehind="albumes.aspx.cs" Inherits="ExamenFinalUTCRoyDuran.albumes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 990px;
+        }
+        .auto-style2 {
+            width: 217px;
+        }
+        .auto-style3 {
+            width: 479px;
+        }
+        .auto-style4 {
+            width: 27px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
@@ -41,4 +55,19 @@
         <asp:ControlParameter ControlID="txtprecio" Name="precio" PropertyName="Text" />
     </InsertParameters>
     </asp:SqlDataSource>
-</asp:Content>
+    <br />
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">
+    <asp:Button CssClass="primario" ID="Button1" runat="server" Text="Ingresar Album" OnClick="Button1_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button CssClass="primario" ID="Button2" runat="server" Text="Consultar Album" Width="154px" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button CssClass="primario" ID="Button3" runat="server" Text="Bitacora" Width="141px" />
+            </td>
+            <td class="auto-style4">&nbsp;</td>
+        </tr>
+    </table>
+    <br />
+    </asp:Content>
