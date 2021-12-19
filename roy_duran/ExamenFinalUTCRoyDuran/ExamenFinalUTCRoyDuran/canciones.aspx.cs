@@ -13,5 +13,15 @@ namespace ExamenFinalUTCRoyDuran
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlCancion.Insert();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -72,6 +72,7 @@
     <Content Include="contacto.aspx" />
     <Content Include="CSS\main.css" />
     <Content Include="inicio.aspx" />
+    <Content Include="notamusical.jpg" />
     <Content Include="techno.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
