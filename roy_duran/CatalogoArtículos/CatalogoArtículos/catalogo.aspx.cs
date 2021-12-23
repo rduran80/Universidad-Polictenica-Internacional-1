@@ -13,5 +13,10 @@ namespace CatalogoArtículos
         {
             SqlProductos.Insert();
         }
+
+        protected void SqlProductos_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }

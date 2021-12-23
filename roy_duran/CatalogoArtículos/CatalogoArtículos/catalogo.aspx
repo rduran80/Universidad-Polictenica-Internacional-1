@@ -31,10 +31,10 @@
             <asp:TextBox ID="txtnombre" runat="server" Width="106px"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label5" runat="server" Text="Cantidad:  "></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server" Width="45px"></asp:TextBox>
+            <asp:TextBox ID="txtcant" runat="server" Width="45px"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label6" runat="server" Text="Precio:  "></asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server" Width="72px"></asp:TextBox>
+            <asp:TextBox ID="txtprecio" runat="server" Width="72px"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="Descripcion:  "></asp:Label>
@@ -54,7 +54,7 @@
 			
 		    <table class="auto-style1">
                 <tr>
-                    <td class="auto-style8">&nbsp;</td>
+                    <td class="auto-style8"></td>
                     <td class="auto-style9">
                         <asp:GridView ID="GridView1" runat="server" class="footer" Width="956px" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="codigo" DataSourceID="SqlProductos" ForeColor="#333333" GridLines="None" CssClass="auto-style10">
                             <AlternatingRowStyle BackColor="White" />
@@ -76,7 +76,10 @@
                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlProductos" runat="server" ConnectionString="<%$ ConnectionStrings:catalogoprodConnectionString %>" SelectCommand="SELECT * FROM [productos]" InsertCommand="insert into productos  values(@nombre, @descripcion, @precio, @cantidad) ">
+                        <asp:SqlDataSource ID="SqlProductos" runat="server" ConnectionString="<%$ ConnectionStrings:catalogoprodConnectionString %>" SelectCommand="SELECT * FROM [productos]" InsertCommand="insert into productos  values(@nombre, @descripcion, @precio, @cantidad) " DeleteCommand="delete from productos where codigo=@codigo" OnSelecting="SqlProductos_Selecting">
+                            <DeleteParameters>
+                                <asp:ControlParameter ControlID="Textcodigo" Name="codigo" PropertyName="Text" />
+                            </DeleteParameters>
                             <InsertParameters>
                                 <asp:ControlParameter ControlID="txtnombre" Name="nombre" PropertyName="Text" />
                                 <asp:ControlParameter ControlID="txtdescripcion" Name="descripcion" PropertyName="Text" />
@@ -85,7 +88,7 @@
                             </InsertParameters>
                         </asp:SqlDataSource>
                     </td>
-                    <td class="auto-style9">&nbsp;</td>
+                    <td class="auto-style9"></td>
                 </tr>
                 <tr>
                     <td class="auto-style8">&nbsp;</td>
