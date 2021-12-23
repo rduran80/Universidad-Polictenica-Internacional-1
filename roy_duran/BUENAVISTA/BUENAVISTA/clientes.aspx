@@ -111,7 +111,7 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlUsuario" runat="server" ConnectionString="<%$ ConnectionStrings:BUENAVISTAWEBConnectionString %>" DeleteCommand="DELETE FROM USUARIO WHERE CEDULA=@CEDULA" InsertCommand="INSERT INTO USUARIO values (@NOMBRE,@CEDULA,@TELEFONO,@DIRECCION,@TIPO)" SelectCommand="SELECT * FROM [USUARIO]" UpdateCommand="UPDATE USUARIO SET NOMBRE =@nombre,TELEFONO = @TELEFONO, DIRECCION =@DIRECCION  WHERE CEDULA=@cedula">
+            <asp:SqlDataSource ID="SqlUsuario" runat="server" ConnectionString="<%$ ConnectionStrings:GIMNASIOConnectionString2 %>" DeleteCommand="DELETE FROM USUARIO WHERE CEDULA=@CEDULA" InsertCommand="INSERT INTO USUARIO VALUES (@NOMBRE,@CEDULA,@TELEFONO,@DIRECCION,@TIPO)" SelectCommand="SELECT * FROM [USUARIO]" UpdateCommand="UPDATE USUARIO SET NOMBRE = @NOMBRE,TELEFONO = @TELEFONO, DIRECCION =@DIRECCION TIPO = @TIPO WHERE CEDULA='1001'">
                 <DeleteParameters>
                     <asp:ControlParameter ControlID="txtCedula" Name="CEDULA" PropertyName="Text" />
                 </DeleteParameters>
@@ -123,15 +123,18 @@
                     <asp:ControlParameter ControlID="ddrTipo" Name="TIPO" PropertyName="SelectedValue" />
                 </InsertParameters>
                 <UpdateParameters>
-                    <asp:ControlParameter ControlID="txtNombre" Name="nombre" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="txtNombre" Name="NOMBRE" PropertyName="Text" />
                     <asp:ControlParameter ControlID="txtTelefono" Name="TELEFONO" PropertyName="Text" />
                     <asp:ControlParameter ControlID="txtDireccion" Name="DIRECCION" PropertyName="Text" />
-                    <asp:ControlParameter ControlID="txtCedula" Name="cedula" PropertyName="Text" />
+                    <asp:ControlParameter ControlID="ddrTipo" Name="TIPO" PropertyName="SelectedValue" />
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
         </div>
 
     </form>
+    <p>
+&nbsp;
+    </p>
  </body>
 </html>
