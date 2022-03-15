@@ -1,8 +1,0 @@
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\bin\Debug\tarea26feb.exe.config
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\bin\Debug\tarea26feb.exe
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\bin\Debug\tarea26feb.pdb
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\obj\Debug\tarea26feb.csproj.SuggestedBindingRedirects.cache
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\obj\Debug\tarea26feb.csproj.CoreCompileInputs.cache
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\obj\Debug\tarea26feb.exe
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\obj\Debug\tarea26feb.pdb
-C:\Users\Samsung\source\repos\tarea26feb\tarea26feb\obj\Debug\tarea26feb.csproj.AssemblyReference.cache
