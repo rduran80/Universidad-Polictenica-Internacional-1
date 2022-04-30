@@ -1,0 +1,4 @@
+C:\Users\arojas\source\repos\controlgastos\controlgastos\obj\Debug\EXAMEN3RANDALLROJAS.csproj.AssemblyReference.cache
+C:\Users\arojas\source\repos\controlgastos\controlgastos\obj\Debug\EXAMEN3RANDALLROJAS.csproj.CoreCompileInputs.cache
+C:\Users\arojas\source\repos\controlgastos\controlgastos\obj\Debug\controlgastos.dll
+C:\Users\arojas\source\repos\controlgastos\controlgastos\obj\Debug\controlgastos.pdb
